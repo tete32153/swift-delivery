@@ -1,0 +1,9 @@
+#header{
+    background-image: url('images/popular-food-meal-website-header.jpg'); 
+    height:400px; background-size:cover; 
+    border-radius: 0px;
+}
+
+img{
+    width: 250px;
+}

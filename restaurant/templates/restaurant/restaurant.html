@@ -1,0 +1,55 @@
+{% extends 'restaurant/headers.html' %}
+{%load staticfiles}
+
+{%block body%}
+
+<div class="ui placeholder segment" style="background-image: url({{restaurant.cover_image.url}}); height:400px; background-size:cover; 
+border-radius: 0px;"  >
+<div class="ui secondary  menu"  style="margin:0px none">
+        <a class="active item">
+          Home
+        </a>
+       
+        <div class="right menu">
+      
+          <a class="ui item" style="font-size: 18px; color: white">
+            Login
+          </a>
+          
+          <button class="ui small inverted yellow button">Create Account</button>
+        </div>
+      </div>
+      <div class="item" style="padding-top: 280px; padding-left:480px;">
+            <div class="ui icon input" style="width:500px; " >
+              <input type="text" placeholder="Search for restaurants or meals...">
+              <i class="search link icon"></i>
+            </div>
+          
+        </div>
+</div>
+
+<h1 class="ui header">{{restaurant.restaurant_name}}</h1>
+
+{%for menu in menu.all%}
+<table class="ui large selectable celled table" style="width:550px; margin-left:500px;">
+    <thead>
+      <tr>
+        <th class="ten wide">{{menu.name}}</th>
+        <th>Price</th>
+     </tr>
+    </thead>
+    <tbody>
+            {%for meal in menu.meal.all%}
+        <tr>
+          <td>{{meal}}</td>
+          <td>GHS {{meal.price}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+
+
+
+{%endfor%}
+{%endblock%}

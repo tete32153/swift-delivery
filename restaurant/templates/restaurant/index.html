@@ -1,0 +1,31 @@
+{% extends 'restaurant/base_template.html' %}
+{% load static %}
+{%block content%}
+{% if restaurant_list %}
+    <ul>
+    {% for restaurant in restaurant_list %}
+        <div class="ui link cards" style="padding-left: 100px;">
+            <div class="card">
+              <div class="ui slide masked reveal image">
+                <a  href="/restaurant/{{ restaurant.id }}/"> 
+                    {% if restaurant.image %}
+                    <img  src="{{restaurant.image.url}}" alt="My image" > 
+                    {%endif%}
+                </a>
+              </div>
+              <div class="content">
+                <div class="header">{{ restaurant.restaurant_name }}</div>
+                
+                <div class="description">
+                 {{restaurant.address}}
+                </div>
+              </div>
+              
+            </div>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Restaurants are available.</p>
+{% endif %}
+
+{%endblock%}

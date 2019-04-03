@@ -1,0 +1,42 @@
+{% extends 'restaurant/headers.html' %}
+{%load staticfiles}
+
+{%block body%}
+
+<div class="ui placeholder segment" id="header" >
+  
+  <div class="ui secondary  menu">
+   
+    
+    <a class="item">
+      Home
+    </a>
+    <div class="right menu">
+      <a class="ui item" style="Color:white; font-size: 18px;">
+        Login
+      </a>
+      
+        <button class="ui inverted button">Create Account</button>
+        
+    </div>
+  </div>
+
+  <div class="item" style="padding-top: 280px; padding-left:480px;">
+    <div class="ui icon input" style="width:500px; " >
+      <input type="text" placeholder="Search for restaurants or meals...">
+      <i class="search link icon"></i>
+    </div>
+  
+</div>
+</div>
+
+<div class="main">
+
+  <div class="content">
+    <div class="ui segment">
+      {%block content%} {%endblock%}
+    </div>
+  </div>
+</div>
+
+  {%endblock%}
