@@ -1,7 +1,7 @@
 {% extends 'restaurant/base_template.html' %}
 {% load static %}
 {%block content%}
-<div class="container">
+<div class="container-fluid bg-light" style="padding-left:250px">
         <div class="row">
           <div class="col-6 col-md-4">
 <h1 id="txtheader" style="margin-top: 25px; margin-left:50px; font-size: 32px;
@@ -16,7 +16,7 @@ text-transform: none;
 {%if category %}
 <ul>
         {% for category in category %}
-<button type="button" style="margin-top: 25px; margin-left:50px" class="btn btn-outline-primary">{{category.name}}</button>
+<button type="button" style="margin-top: 25px; margin-left:50px" class="btn btn-outline-primary">{{category}}</button>
 {%endfor%}
 </ul>
 {%endif%}
