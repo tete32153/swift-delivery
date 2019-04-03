@@ -1,12 +1,14 @@
 from django.shortcuts import get_object_or_404, render
-from . models import Restaurant
+from . models import Restaurant, Category
 
 def index(request):
 
     restaurant_list = Restaurant.objects.all()
+    category = Category.objects.all()
 
     context = {
         'restaurant_list': restaurant_list,
+        'category': category
     }
     return render(request,'restaurant/index.html', context)
 

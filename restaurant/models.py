@@ -63,6 +63,7 @@ class Restaurant(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to='images/', blank=True)
+    imageb = models.ImageField(upload_to='images/', blank=True)
     cover_image = models.ImageField(upload_to ='images/', blank = True)
 
     class Meta:

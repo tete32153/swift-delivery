@@ -1,9 +1,8 @@
-#header{
-    background-image: url('images/popular-food-meal-website-header.jpg'); 
-    height:400px; background-size:cover; 
-    border-radius: 0px;
-}
+
 
 img{
     width: 250px;
+}
+.card:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }

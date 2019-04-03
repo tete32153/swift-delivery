@@ -26,7 +26,7 @@ SECRET_KEY = 'vo#nvgcio1s^&_ywg=64bqdwy0_64#0p#)a8s(6p-ghy1l6*6%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['swift-delivery.herokuapp.com']
+ALLOWED_HOSTS = ['swift-delivery.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
